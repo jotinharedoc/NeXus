@@ -367,7 +367,7 @@ export default function NexusPortalHero() {
           </div>
 
           <div className="absolute left-1/2 top-[66%] w-[84%] max-w-xl -translate-x-1/2 text-center md:top-[68%]">
-            <p className="text-sm leading-6 text-white/45 md:text-base">
+            <p className="text-base leading-7 text-white/70 md:text-lg">
               Produtos digitais que movem negócios.
             </p>
           </div>
@@ -402,14 +402,14 @@ export default function NexusPortalHero() {
                 Nexus / Experiências Digitais
               </span>
 
-              <h2 className="mt-6 max-w-4xl text-4xl font-medium leading-[0.96] tracking-tighter text-white md:text-6xl lg:text-7xl">
+              <h1 className="nexus-heading mt-6 max-w-4xl text-white">
                 Criamos produtos digitais
                 <br />
 
                 <span className="text-[#ee3c98]">
                   que movem negócios.
                 </span>
-              </h2>
+              </h1>
 
               <div className="mt-12 flex flex-wrap gap-x-8 gap-y-3 border-t border-white/15 pt-6 text-xs uppercase tracking-[0.2em]">
                 <span className="text-[#ee3c98]">

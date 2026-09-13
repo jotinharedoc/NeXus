@@ -27,26 +27,20 @@ export default function NexusPositioning() {
         </div>
 
         <div className="mt-16 grid gap-12 md:grid-cols-[1.35fr_0.65fr] md:items-end">
-          <h2 className="max-w-4xl text-5xl font-medium leading-[0.9] tracking-[-0.06em] md:text-7xl lg:text-[92px]">
-            Tecnologia
-            <br />
-            na medida do
+          <h2 className="max-w-4xl text-4xl font-medium leading-[1.05] tracking-[-0.06em] md:text-6xl lg:text-7xl">
+            A tecnologia certa.
             <br />
 
-            <span className="nexus-serif font-light italic text-[#08eadb]">
-              problema.
+            <span className="text-[#08eadb]">
+              Na medida certa.
             </span>
           </h2>
 
           <div className="border-t border-white/15 pt-6">
             <p className="text-sm leading-7 text-white/55 md:text-base md:leading-8">
-              Nem todo problema precisa de uma plataforma gigante. Nem toda
-              empresa precisa da mesma solução.
-            </p>
-
-            <p className="mt-5 text-sm leading-7 text-white/55 md:text-base md:leading-8">
-              A Nexus existe para conectar estratégia, design e tecnologia na
-              proporção certa.
+              Simples quando possível.
+              <br />
+              Sofisticado quando necessário.
             </p>
           </div>
         </div>

@@ -19,6 +19,14 @@ export const metadata: Metadata = {
   title: "Nexus — Experiências Digitais",
   description:
     "Produtos digitais, tecnologia, crescimento e automação para negócios.",
+  openGraph: {
+    title: "Nexus — Experiências Digitais",
+    description: "Produtos digitais, tecnologia, crescimento e automação para negócios.",
+    siteName: "Nexus",
+    locale: "pt_BR",
+    type: "website",
+  },
+  icons: { icon: "/nexus-logo.png", apple: "/nexus-logo.png" },
 };
 
 export default function RootLayout({

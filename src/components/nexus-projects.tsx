@@ -200,30 +200,29 @@ export default function NexusProjects() {
               <span className="h-2.5 w-2.5 rotate-45 border border-[#08eadb]" />
 
               <span className="text-[10px] uppercase tracking-[0.25em] text-white/35 md:text-xs">
-                Projetos / 02
+                Projetos / 03
               </span>
             </div>
 
-            <h2 className="mt-7 max-w-3xl text-4xl font-medium leading-[0.95] tracking-[-0.055em] md:text-6xl lg:text-7xl">
-              Ideias que viram
+            <h2 className="nexus-heading mt-7 max-w-3xl">
+              Construído
               <br />
 
-              <span className="nexus-serif font-light italic text-[#08eadb]">
-                soluções reais.
+              <span className="text-[#08eadb]">
+                no mundo real.
               </span>
             </h2>
           </div>
 
           <p className="max-w-lg text-sm leading-7 text-white/50 md:text-base md:leading-8">
-            Projetos digitais pensados a partir do problema, da operação e do
-            contexto de cada negócio.
+            Sistemas, sites e automações.
           </p>
         </div>
 
         {/* FEATURED */}
         <article className="mt-12 border border-white/10 md:mt-16">
-          <div className="grid md:grid-cols-[0.78fr_1.22fr]">
-            <div className="flex min-h-120 flex-col justify-between p-6 md:p-10">
+          <div className="grid lg:grid-cols-[0.78fr_1.22fr]">
+            <div className="flex min-h-96 flex-col justify-between p-6 md:p-10">
               <div>
                 <div className="flex items-center justify-between">
                   <span className="text-[10px] uppercase tracking-[0.2em] text-[#ee3c98]">

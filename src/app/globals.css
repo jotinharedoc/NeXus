@@ -21,6 +21,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 104px;
   background: var(--nexus-navy);
 }
 
@@ -42,6 +43,11 @@ a {
   text-decoration: none;
 }
 
+:focus-visible {
+  outline: 2px solid #08a99f;
+  outline-offset: 5px;
+}
+
 button,
 input,
 textarea {
@@ -60,6 +66,14 @@ textarea {
 
 .nexus-serif {
   font-family: var(--font-serif), serif;
+}
+
+.nexus-heading {
+  font-size: clamp(2.5rem, 5.5vw, 5rem);
+  font-weight: 700;
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
 }
 
 @media (min-width: 768px) {

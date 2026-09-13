@@ -3,25 +3,25 @@ const steps = [
     number: "01",
     title: "ENTENDER",
     description:
-      "Antes de pensar em tecnologia, entendemos o problema, o contexto e o resultado que precisa existir.",
+      "O problema.",
   },
   {
     number: "02",
     title: "CONSTRUIR",
     description:
-      "Transformamos estratégia em interface, código, automação ou produto digital com foco no que realmente importa.",
+      "A solução.",
   },
   {
     number: "03",
-    title: "ENTREGAR",
+    title: "LANÇAR",
     description:
-      "Colocamos a solução em funcionamento, validamos a experiência e garantimos que tudo esteja pronto para uso real.",
+      "Colocar no mundo.",
   },
   {
     number: "04",
     title: "EVOLUIR",
     description:
-      "Analisamos o que acontece depois da entrega e identificamos onde produto, operação e desempenho podem avançar.",
+      "Melhorar sempre.",
   },
 ];
 
@@ -43,19 +43,14 @@ export default function NexusProcess() {
             </div>
 
             <h2 className="mt-7 max-w-3xl text-4xl font-medium leading-[0.95] tracking-[-0.055em] md:text-6xl lg:text-7xl">
-              Do problema
+              Simples de
               <br />
-              até a{" "}
-              <span className="nexus-serif font-light italic text-[#1d315c]">
-                solução.
+              <span className="text-[#1d315c]">
+                trabalhar.
               </span>
             </h2>
           </div>
 
-          <p className="max-w-lg text-sm leading-7 text-[#10182f]/55 md:text-base md:leading-8">
-            Nosso processo não começa escolhendo uma tecnologia. Ele começa
-            entendendo o que precisa mudar.
-          </p>
         </div>
 
         <div className="relative">
@@ -64,11 +59,11 @@ export default function NexusProcess() {
             className="absolute left-0 top-0 hidden h-px w-full bg-[#10182f]/15 md:block"
           />
 
-          <div className="grid md:grid-cols-4">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4">
             {steps.map((step, index) => (
               <article
                 key={step.number}
-                className={`relative border-b border-[#10182f]/15 py-10 md:min-h-96 md:border-b-0 md:px-7 md:py-12 ${
+                className={`relative border-b border-[#10182f]/15 py-10 md:min-h-72 md:border-b-0 md:px-7 md:py-12 ${
                   index !== steps.length - 1
                     ? "md:border-r md:border-[#10182f]/15"
                     : ""
@@ -94,7 +89,7 @@ export default function NexusProcess() {
                   />
                 </div>
 
-                <div className="mt-16 md:mt-28">
+                <div className="mt-10 md:mt-16">
                   <h3 className="text-2xl font-medium tracking-[-0.04em]">
                     {step.title}
                   </h3>

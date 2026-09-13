@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const links = [
   {
@@ -12,15 +12,15 @@ const links = [
   },
   {
     number: "02",
-    label: "Projetos",
-    href: "#projetos",
-    id: "projetos",
+    label: "Planos",
+    href: "#planos",
+    id: "planos",
   },
   {
     number: "03",
-    label: "Processo",
-    href: "#processo",
-    id: "processo",
+    label: "Projetos",
+    href: "#projetos",
+    id: "projetos",
   },
   {
     number: "04",
@@ -33,6 +33,19 @@ const links = [
 export default function NexusNavbar() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("");
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+        menuButtonRef.current?.focus();
+      }
+    };
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [open]);
 
   useEffect(() => {
     const sections = links
@@ -101,7 +114,7 @@ export default function NexusNavbar() {
           {/* DESKTOP */}
           <nav
             aria-label="Navegação principal"
-            className="hidden items-center gap-7 md:flex lg:gap-9"
+            className="hidden items-center gap-7 lg:flex lg:gap-9"
           >
             {links.map((link) => {
               const isActive = active === link.id;
@@ -144,7 +157,7 @@ export default function NexusNavbar() {
           {/* CTA */}
           <a
             href="#contato"
-            className="group hidden items-center gap-4 border-l border-white/10 pl-5 text-[13px] font-medium text-white md:flex"
+            className="group hidden items-center gap-4 border-l border-white/10 pl-5 text-[13px] font-medium text-white lg:flex"
           >
             <span>Iniciar projeto</span>
 
@@ -155,12 +168,13 @@ export default function NexusNavbar() {
 
           {/* MOBILE BUTTON */}
           <button
+            ref={menuButtonRef}
             type="button"
             onClick={() => setOpen((current) => !current)}
             aria-expanded={open}
             aria-controls="nexus-mobile-menu"
             aria-label={open ? "Fechar menu" : "Abrir menu"}
-            className="relative flex h-10 w-10 items-center justify-center md:hidden"
+            className="relative flex h-11 w-11 items-center justify-center lg:hidden"
           >
             <span className="relative block h-4 w-5">
               <span
@@ -186,9 +200,9 @@ export default function NexusNavbar() {
         {open && (
           <div
             id="nexus-mobile-menu"
-            className="border-x border-b border-white/10 bg-[#10182f]/95 px-5 pb-5 pt-3 backdrop-blur-md md:hidden"
+            className="max-h-[calc(100svh-104px)] overflow-y-auto border-x border-b border-white/10 bg-[#10182f]/95 px-5 pb-5 pt-3 backdrop-blur-md lg:hidden"
           >
-            <nav className="flex flex-col">
+            <nav aria-label="Navegação móvel" className="flex flex-col">
               {links.map((link, index) => {
                 const isActive = active === link.id;
 

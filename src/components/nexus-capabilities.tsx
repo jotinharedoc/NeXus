@@ -68,22 +68,22 @@ export default function NexusCapabilities() {
             <div className="flex items-center gap-3">
               <span className="h-2.5 w-2.5 rotate-45 border border-[#ee3c98]" />
 
-              <span className="text-[10px] uppercase tracking-[0.26em] text-white/35 md:text-xs">
+              <span className="text-xs uppercase tracking-[0.2em] text-white/60">
                 Soluções / 01
               </span>
             </div>
 
-            <h2 className="mt-8 text-4xl font-medium leading-[0.95] tracking-[-0.055em] md:text-6xl lg:text-7xl">
+            <h2 className="nexus-heading mt-8">
               Do conceito
               <br />
 
-              <span className="text-white/45">
+              <span className="text-white/60">
                 à escala.
               </span>
             </h2>
           </div>
 
-          <p className="text-sm uppercase tracking-[0.18em] text-white/30">
+          <p className="text-xs uppercase tracking-[0.16em] text-white/60">
             Produto · Crescimento · Operação
           </p>
         </div>
@@ -103,11 +103,11 @@ export default function NexusCapabilities() {
             </span>
 
             <div>
-              <h3 className="text-3xl font-medium tracking-tighter md:text-4xl">
+              <h3 className="text-3xl font-semibold tracking-tight md:text-4xl">
                 {capability.title}
               </h3>
 
-              <p className="mt-4 text-sm text-white/40">
+              <p className="mt-4 text-base leading-7 text-white/65">
                 {capability.description}
               </p>
             </div>
@@ -118,7 +118,7 @@ export default function NexusCapabilities() {
                   key={service}
                   className="flex items-center justify-between border-b border-white/10 py-4 first:pt-0 last:border-b-0"
                 >
-                  <span className="text-sm text-white/60">
+                  <span className="text-base text-white/75">
                     {service}
                   </span>
 
@@ -136,7 +136,7 @@ export default function NexusCapabilities() {
         ))}
 
         <div className="pt-12">
-          <p className="text-sm text-white/35">
+          <p className="text-sm text-white/60">
             Tecnologia com propósito.
           </p>
         </div>

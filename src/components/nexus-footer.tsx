@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function NexusFooter() {
   return (
     <footer className="relative overflow-hidden bg-[#10182f] px-4 pb-8 pt-16 text-white md:px-8 md:pb-10 md:pt-20">
@@ -7,39 +9,30 @@ export default function NexusFooter() {
       <div className="mx-auto max-w-300">
         <div className="grid gap-14 md:grid-cols-[1.3fr_0.7fr]">
           <div>
-            <div className="flex items-center gap-4">
-              <span className="relative h-4 w-4 rotate-45 border border-[#08eadb]">
-                <span className="absolute inset-1 bg-[#ee3c98]" />
-              </span>
+            <Image src="/nexus-logo.png" alt="Nexus" width={600} height={209} sizes="(max-width: 768px) 65vw, 360px" className="h-auto w-64 max-w-full md:w-90" />
 
-              <span className="text-xl font-semibold tracking-tighter">
-                NEXUS
-              </span>
-            </div>
-
-            <p className="mt-6 max-w-md text-sm leading-7 text-white/40">
-              Estratégia, design e tecnologia conectados para construir
-              experiências digitais que movem negócios.
+            <p className="mt-8 max-w-md text-base leading-7 text-white/65">
+              Produtos digitais que movem negócios.
             </p>
           </div>
 
           <div className="grid grid-cols-2 gap-10">
             <div>
-              <span className="text-[9px] uppercase tracking-[0.2em] text-white/25">
+              <span className="text-xs uppercase tracking-[0.2em] text-white/60">
                 Navegação
               </span>
 
-              <div className="mt-5 flex flex-col gap-3 text-sm text-white/50">
+              <div className="mt-5 flex flex-col gap-4 text-base text-white/75">
                 <a href="#servicos" className="hover:text-[#08eadb]">
                   Serviços
                 </a>
 
-                <a href="#projetos" className="hover:text-[#08eadb]">
-                  Projetos
+                <a href="#planos" className="hover:text-[#08eadb]">
+                  Planos
                 </a>
 
-                <a href="#processo" className="hover:text-[#08eadb]">
-                  Processo
+                <a href="#projetos" className="hover:text-[#08eadb]">
+                  Projetos
                 </a>
 
                 <a href="#contato" className="hover:text-[#08eadb]">
@@ -49,11 +42,11 @@ export default function NexusFooter() {
             </div>
 
             <div>
-              <span className="text-[9px] uppercase tracking-[0.2em] text-white/25">
+              <span className="text-xs uppercase tracking-[0.2em] text-white/60">
                 Nexus
               </span>
 
-              <div className="mt-5 flex flex-col gap-3 text-sm text-white/50">
+              <div className="mt-5 flex flex-col gap-4 text-base text-white/75">
                 <span>Construir</span>
                 <span>Crescer</span>
                 <span>Otimizar</span>
@@ -62,7 +55,7 @@ export default function NexusFooter() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col gap-5 border-t border-white/10 pt-6 text-[10px] uppercase tracking-[0.18em] text-white/25 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-16 flex flex-col gap-5 border-t border-white/15 pt-6 text-[10px] uppercase tracking-[0.18em] text-white/60 sm:flex-row sm:items-center sm:justify-between">
           <span>Nexus / Experiências Digitais</span>
 
           <span>© 2026 Nexus</span>

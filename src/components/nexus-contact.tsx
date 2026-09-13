@@ -10,25 +10,21 @@ export default function NexusContact() {
             <div className="flex items-center gap-3">
               <span className="h-2.5 w-2.5 rotate-45 border border-[#ee3c98]" />
 
-              <span className="text-[10px] uppercase tracking-[0.25em] text-[#10182f]/40 md:text-xs">
+              <span className="text-[10px] uppercase tracking-[0.25em] text-[#10182f]/70 md:text-xs">
                 Contato / 04
               </span>
             </div>
 
-            <h2 className="mt-8 text-5xl font-medium leading-[0.9] tracking-[-0.06em] md:text-7xl">
-              Tem um
+            <h2 className="mt-8 text-4xl font-bold leading-[1.08] tracking-[-0.045em] md:text-6xl">
+              Tem uma ideia?
               <br />
-              projeto?
-              <br />
-
-              <span className="nexus-serif font-light italic text-[#1d315c]">
-                Vamos construir.
+              <span className="text-[#1d315c]">
+                Vamos tirar do papel.
               </span>
             </h2>
 
-            <p className="mt-8 max-w-md text-sm leading-7 text-[#10182f]/50 md:text-base">
-              Conte o que precisa existir, o que precisa melhorar ou o problema
-              que sua empresa precisa resolver.
+            <p className="mt-8 max-w-md text-sm leading-7 text-[#10182f]/70 md:text-base">
+              Conta pra gente.
             </p>
           </div>
 
@@ -37,9 +33,9 @@ export default function NexusContact() {
               <div>
                 <label
                   htmlFor="name"
-                  className="text-[10px] uppercase tracking-[0.2em] text-[#10182f]/40"
+                  className="text-[10px] uppercase tracking-[0.2em] text-[#10182f]/70"
                 >
-                  Seu nome
+                  Nome
                 </label>
 
                 <input
@@ -47,15 +43,17 @@ export default function NexusContact() {
                   name="name"
                   type="text"
                   autoComplete="name"
+                  required
+                  maxLength={120}
                   placeholder="Como podemos te chamar?"
-                  className="mt-3 w-full border-b border-[#10182f]/20 bg-transparent py-4 text-base text-[#10182f] outline-none transition-colors placeholder:text-[#10182f]/25 focus:border-[#08a99f]"
+                  className="mt-3 w-full border-b border-[#10182f]/20 bg-transparent py-4 text-base text-[#10182f] transition-colors placeholder:text-[#10182f]/65 focus:border-[#08a99f]"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="email"
-                  className="text-[10px] uppercase tracking-[0.2em] text-[#10182f]/40"
+                  className="text-[10px] uppercase tracking-[0.2em] text-[#10182f]/70"
                 >
                   E-mail
                 </label>
@@ -65,38 +63,44 @@ export default function NexusContact() {
                   name="email"
                   type="email"
                   autoComplete="email"
+                  required
+                  maxLength={254}
                   placeholder="voce@empresa.com"
-                  className="mt-3 w-full border-b border-[#10182f]/20 bg-transparent py-4 text-base text-[#10182f] outline-none transition-colors placeholder:text-[#10182f]/25 focus:border-[#08a99f]"
+                  className="mt-3 w-full border-b border-[#10182f]/20 bg-transparent py-4 text-base text-[#10182f] transition-colors placeholder:text-[#10182f]/65 focus:border-[#08a99f]"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="project"
-                  className="text-[10px] uppercase tracking-[0.2em] text-[#10182f]/40"
+                  className="text-[10px] uppercase tracking-[0.2em] text-[#10182f]/70"
                 >
-                  Projeto
+                  Mensagem
                 </label>
 
                 <textarea
                   id="project"
                   name="project"
                   rows={5}
+                  required
+                  maxLength={5000}
                   placeholder="Conta pra gente o que você está pensando."
-                  className="mt-3 w-full resize-none border-b border-[#10182f]/20 bg-transparent py-4 text-base leading-7 text-[#10182f] outline-none transition-colors placeholder:text-[#10182f]/25 focus:border-[#ee3c98]"
+                  className="mt-3 w-full resize-y border-b border-[#10182f]/20 bg-transparent py-4 text-base leading-7 text-[#10182f] transition-colors placeholder:text-[#10182f]/65 focus:border-[#ee3c98]"
                 />
               </div>
 
               <div className="flex flex-col gap-5 pt-2 sm:flex-row sm:items-center sm:justify-between">
-                <span className="max-w-xs text-xs leading-5 text-[#10182f]/35">
-                  O envio por e-mail será conectado na etapa de integração.
+                <span id="contact-status" className="max-w-xs text-xs leading-5 text-[#10182f]/70">
+                  Formulário temporariamente indisponível.
                 </span>
 
                 <button
                   type="button"
-                  className="group inline-flex w-fit items-center gap-5 rounded-full bg-[#10182f] px-6 py-3.5 text-sm font-medium text-white"
+                  disabled
+                  aria-describedby="contact-status"
+                  className="group inline-flex w-fit items-center gap-5 border border-[#10182f] bg-[#10182f] px-6 py-3.5 text-sm font-medium text-white disabled:cursor-not-allowed disabled:opacity-60"
                 >
-                  <span>Enviar briefing</span>
+                  <span>Enviar</span>
 
                   <span className="text-[#08eadb] transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1">
                     ↗
